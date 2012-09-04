@@ -3,10 +3,8 @@
   "name": "contacts",
   "version": "0.1",
   "description": "build an addressbook and text ppl",
-  "icons": {
-  },
   "browser_action": {
-    "default_icon": "",
+    "default_icon": "img/contacts.png",
     "default_title": "contacts",
     "default_popup": "contacts.html"
   },
