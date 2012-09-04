@@ -8,8 +8,10 @@ $(document).ready(function() {
     localStorage["contacts"] = JSON.stringify(contacts);
   }
 
+  // render a single contact
   function addOne(name, number) {
-    console.log(name, number);
+    // $("#contacts").append(contact_html);
+    // console.log(contact_html);
   }
 
   function render() {
