@@ -1,11 +1,16 @@
 $(document).ready(function() {
   // since localStorage only stores key/value pairs we will have to encode and decode JSON
+  // save returns false if number already exists
   function save(name, number) {
     var contacts = {};
     var data = localStorage["contacts"];
     contacts = JSON.parse(data);
-    contacts[name] = number;
-    localStorage["contacts"] = JSON.stringify(contacts);
+    if (!contacts[name]) {
+      contacts[name] = number;
+      localStorage["contacts"] = JSON.stringify(contacts);
+      return true;
+    }
+    return false;
   }
 
   // render a single contact
@@ -28,8 +33,12 @@ $(document).ready(function() {
     e.preventDefault();
     var name = $("#name").val();
     var number = $("#number").val();
-    save(name, number);
-    addOne(name, number);
+    if (save(name, number)) {
+      addOne(name, number);
+      $("#name, #number").val("");
+    } else {
+      // show that num already exists
+    }
   });
 
   // initialize localStorage
