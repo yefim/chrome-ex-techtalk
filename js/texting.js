@@ -4,7 +4,7 @@ $(document).ready(function() {
     var name = $(this).siblings(".name").text();
     var number = $(this).siblings(".number").text();
     // do sexy slide to show text-area for text
-    // text should be To: {{name}} [text]
+    // text should be To: {{name}} [text] Send
     console.log(name, number);
   });
 
