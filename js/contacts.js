@@ -10,8 +10,8 @@ $(document).ready(function() {
 
   // render a single contact
   function addOne(name, number) {
-    template = Handlebars.templates.contact;
-    contact_html = template({name: name, number: number});
+    var template = Handlebars.templates.contact;
+    var contact_html = template({name: name, number: number});
     $("#contacts").prepend(contact_html);
   }
 
