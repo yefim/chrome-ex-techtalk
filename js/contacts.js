@@ -32,6 +32,7 @@ $(document).ready(function() {
     addOne(name, number);
   });
 
+  // initialize localStorage
   if (!localStorage["contacts"]) localStorage["contacts"] = "{}";
   render();
 });
