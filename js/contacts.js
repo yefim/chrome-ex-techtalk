@@ -13,7 +13,6 @@ $(document).ready(function() {
     template = Handlebars.templates.contact;
     contact_html = template({name: name, number: number});
     $("#contacts").prepend(contact_html);
-    console.log(contact_html);
   }
 
   function render() {

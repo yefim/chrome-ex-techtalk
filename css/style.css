@@ -11,12 +11,31 @@ input {
   margin: 0;
   padding: 0;
 }
-#name {
+#contacts {
+  margin-top: 10px;
+  /* border-top: 1px solid #888; */
+  max-height: 200px;
+  overflow: auto;
+  counter-reset: contacts 0;
+}
+.contact {
+  padding: 5px;
+  border-top: 1px solid #888;
+}
+.contact span {
+  display: inline-block;
+}
+span.name:before {
+  counter-increment: contacts 1;
+  content: counter(contacts, decimal) ". ";
+  color: #08C;
+}
+.name {
   width: 25%;
 }
-#number {
+.number {
   width: 50%;
 }
-#save {
+.button {
   width: 18%;
 }
