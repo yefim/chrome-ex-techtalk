@@ -32,5 +32,6 @@ $(document).ready(function() {
     addOne(name, number);
   });
 
+  if (!localStorage["contacts"]) localStorage["contacts"] = "{}";
   render();
 });
