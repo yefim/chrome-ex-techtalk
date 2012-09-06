@@ -24,7 +24,7 @@ $(document).ready(function() {
     var contacts = {};
     var data = localStorage["contacts"];
     contacts = JSON.parse(data);
-    for (name in contacts) {
+    for (var name in contacts) {
       addOne(name, contacts[name]);
     }
   }

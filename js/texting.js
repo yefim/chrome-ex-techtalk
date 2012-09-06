@@ -11,11 +11,12 @@ $(document).ready(function() {
   $("#text-form").submit(function(e) {
     e.preventDefault();
 
-    options = {};
+    var options = {};
     options.From = ""; // my twilio number
     options.To = ""; // extracted number
     options.Body = ""; // extracted body
-    $.post('/twilio', options, function(data) {
+    var url = "";
+    $.post(url, options, function(data) {
       // success
     });
   });
