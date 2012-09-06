@@ -7,4 +7,16 @@ $(document).ready(function() {
     // text should be To: {{name}} [text]
     console.log(name, number);
   });
+
+  $("#text-form").submit(function(e) {
+    e.preventDefault();
+
+    options = {};
+    options.From = ""; // my twilio number
+    options.To = ""; // extracted number
+    options.Body = ""; // extracted body
+    $.post('/twilio', options, function(data) {
+      // success
+    });
+  });
 });
