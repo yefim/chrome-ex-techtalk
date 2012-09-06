@@ -12,10 +12,10 @@ $(document).ready(function() {
     e.preventDefault();
 
     var options = {};
-    options.From = ""; // my twilio number
+    options.From = "+12153524834"; // my twilio number
     options.To = ""; // extracted number
     options.Body = ""; // extracted body
-    var url = "";
+    var url = "https://api.twilio.com/2010-04-01/Accounts/"+TWILIO_SID+"/SMS/Messages";
     $.post(url, options, function(data) {
       // success
     });
