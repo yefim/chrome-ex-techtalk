@@ -44,6 +44,10 @@ span.name:before {
 .button {
   width: 50px;
 }
+.text {
+  width: 56px;
+}
 .text-form {
   display: inline-block;
+  margin-left: 15px;
 }
