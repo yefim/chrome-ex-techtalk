@@ -12,12 +12,18 @@ $(document).ready(function() {
     e.preventDefault();
 
     var options = {};
-    options.From = "+12153524834"; // my twilio number
-    options.To = ""; // extracted number
-    options.Body = ""; // extracted body
-    var url = "https://api.twilio.com/2010-04-01/Accounts/"+TWILIO_SID+"/SMS/Messages";
-    $.post(url, options, function(data) {
-      // success
+    options.to = ""; // extracted number
+    options.body = ""; // extracted body
+    var url = "http://jsonpify.heroku.com?resource=http://sendtext.herokuapp.com/sms";
+    $.ajax({
+      type: 'GET',
+      url: url,
+      data: options,
+      dataType: 'jsonp',
+      success: function(data) {
+        // success
+        console.log(data);
+      }
     });
   });
 });
