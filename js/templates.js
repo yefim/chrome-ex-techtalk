@@ -13,14 +13,7 @@ templates['contact'] = template(function (Handlebars,depth0,helpers,partials,dat
   foundHelper = helpers.number;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.number; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</span>\n  <button class='button text'>Text</button>\n</div>\n";
-  return buffer;});
-templates['text'] = template(function (Handlebars,depth0,helpers,partials,data) {
-  helpers = helpers || Handlebars.helpers;
-  var buffer = "", stack1, foundHelper, functionType="function", escapeExpression=this.escapeExpression;
-
-
-  buffer += "<form id='text-form'>\n  <label for='text-body'>To ";
+  buffer += escapeExpression(stack1) + "</span>\n  <button class='button text'>Text</button>\n</div>\n<form class='text-form'>\n  <label for='text-body'>To ";
   foundHelper = helpers.name;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1() : stack1; }

@@ -15,12 +15,16 @@ input {
   margin-top: 10px;
   /* border-top: 1px solid #888; */
   max-height: 200px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   counter-reset: contacts 0;
 }
 .contact {
   padding: 5px;
   border-top: 1px solid #888;
+  position: relative;
+  left: 0;
+  bottom: 0;
 }
 .contact span {
   display: inline-block;
@@ -38,4 +42,7 @@ span.name:before {
 }
 .button {
   width: 18%;
+}
+.text-form {
+  float: right;
 }

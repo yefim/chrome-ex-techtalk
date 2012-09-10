@@ -17,6 +17,7 @@ $(document).ready(function() {
   function addOne(name, number) {
     var template = Handlebars.templates.contact;
     var contact_html = template({name: name, number: number});
+    console.log(contact_html);
     $("#contacts").prepend(contact_html);
   }
 
