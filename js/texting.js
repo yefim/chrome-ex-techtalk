@@ -5,6 +5,7 @@ $(document).ready(function() {
     var name = $contact.find(".name").text();
     var number = $contact.find(".number").text();
     $contact.animate({left: -$contact.outerWidth()/2});
+    $(".contact").not($contact).animate({left: 0});
     console.log(name, number);
   });
 

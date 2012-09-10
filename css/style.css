@@ -51,3 +51,6 @@ span.name:before {
   display: inline-block;
   margin-left: 15px;
 }
+.to {
+  color: #D14;
+}

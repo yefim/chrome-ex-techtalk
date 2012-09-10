@@ -13,10 +13,10 @@ templates['contact'] = template(function (Handlebars,depth0,helpers,partials,dat
   foundHelper = helpers.number;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.number; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</span>\n  <button class='button text'>Text</button>\n  <form class='text-form'>\n    <label for='body'>To ";
+  buffer += escapeExpression(stack1) + "</span>\n  <button class='button text'>Text</button>\n  <form class='text-form'>\n    <label>To <span class='to'>";
   foundHelper = helpers.name;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + ":\n      <input name='body' class='text-body' type='text'>\n    </label>\n    <input type='submit' value='Send'>\n  </form>\n</div>\n";
+  buffer += escapeExpression(stack1) + "</span>:\n      <input class='text-body' type='text'>\n    </label>\n    <input type='submit' value='Send'>\n  </form>\n</div>\n";
   return buffer;});
 })();
