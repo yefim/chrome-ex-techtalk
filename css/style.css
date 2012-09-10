@@ -25,6 +25,7 @@ input {
   position: relative;
   left: 0;
   bottom: 0;
+  width: 600px;
 }
 .contact span {
   display: inline-block;
@@ -35,14 +36,14 @@ span.name:before {
   color: #08C;
 }
 .name {
-  width: 25%;
+  width: 75px;
 }
 .number {
-  width: 50%;
+  width: 150px;
 }
 .button {
-  width: 18%;
+  width: 50px;
 }
 .text-form {
-  float: right;
+  display: inline-block;
 }

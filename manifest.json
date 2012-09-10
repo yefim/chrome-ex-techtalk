@@ -7,5 +7,6 @@
     "default_icon": "img/contacts.png",
     "default_title": "contacts",
     "default_popup": "contacts.html"
-  }
+  },
+  "content_security_policy": "script-src 'self' https://jsonpify.heroku.com; object-src 'self'"
 }

@@ -1,22 +1,24 @@
 $(document).ready(function() {
-  $(".text").on("click", function(e) {
+  $(".text").live("click", function(e) {
     // on click get name and number
     var $contact = $(this).closest(".contact");
     var name = $contact.find(".name").text();
     var number = $contact.find(".number").text();
-    $contact.animate({left: -$contact.outerWidth()});
-    // var template = Handlebars.templates.text
-    // do sexy slide to show text-area for text
-    // text should be To: {{name}} [text] Send
+    $contact.animate({left: -$contact.outerWidth()/2});
     console.log(name, number);
   });
 
-  $(".text-form").submit(function(e) {
+  $(".text-form").live("submit", function(e) {
     e.preventDefault();
+    var $contact = $(this).closest(".contact");
     var options = {};
-    options.to = ""; // extracted number
-    options.body = ""; // extracted body
-    var url = "http://jsonpify.heroku.com?resource=http://sendtext.herokuapp.com/sms";
+    options.to = $contact.find(".number").text(); // extracted number
+    options.body = $contact.find(".text-body").val(); // extracted body
+
+    $contact.animate({left: 0});
+    $contact.find(".text-body").val("");
+
+    var url = "https://jsonpify.heroku.com?resource=http://sendtext.herokuapp.com/sms";
     $.ajax({
       type: 'GET',
       url: url,
