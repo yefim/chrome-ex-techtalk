@@ -6,14 +6,15 @@
     <script src='js/templates.js'></script>
     <script src='js/contacts.js'></script>
     <script src='js/texting.js'></script>
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
     <link rel='stylesheet' href='css/style.css'>
   </head>
   <body>
     <div id='container'>
-      <form id='contact-form'>
-        <input class='name' id='name' type='text' placeholder='Name...'>
-        <input class='number' id='number' type='text' placeholder='Number...'>
-        <input class='button' id='save' value='Save' type='submit'>
+      <form class='form-inline' id='contact-form'>
+        <input class='name' id='name' type='text' placeholder='Name'>
+        <input class='number' id='number' type='text' placeholder='Number'>
+        <input class='btn btn-primary button' id='save' value='Save' type='submit'>
       </form>
       <div id='contacts'>
       </div>

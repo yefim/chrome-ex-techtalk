@@ -3,7 +3,7 @@
   margin: 0;
 }
 #container {
-  width: 300px;
+  width: 328px;
   padding: 5px;
 }
 input {
@@ -25,7 +25,7 @@ input {
   position: relative;
   left: 0;
   bottom: 0;
-  width: 600px;
+  width: 700px;
 }
 .contact span {
   display: inline-block;
@@ -47,9 +47,12 @@ span.name:before {
 .text {
   width: 56px;
 }
+.form-inline {
+  margin: 0;
+}
 .text-form {
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 65px;
 }
 .to {
   color: #D14;
