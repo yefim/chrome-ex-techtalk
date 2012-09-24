@@ -29,7 +29,7 @@ $(document).ready(function() {
     }
   }
   
-  $("#contact-form").submit(function(e) {
+  $("#contact-form").on("submit", function(e) {
     e.preventDefault();
     var name = $("#name").val();
     var number = $("#number").val();
